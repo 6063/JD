@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.search {
+  width: 100%;
+  height: 44px;
+  background-color: #f10215;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.search .left {
+  flex-basis: 50px;
+  color: white;
+  text-align: center;
+  line-height: 100%;
+}
+.search .right {
+  flex-basis: 50px;
+  color: white;
+  text-align: center;
+  line-height: 100%;
+}
+.search .searchinput {
+  flex: 1;
+  height: 36px;
+  border: none;
+  outline: none;
+  border-radius: 18px;
+}
+
+.main {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.main .banner {
+  position: relative;
+}
+.main .banner .swiper-container {
+  width: 100%;
+}
+.main .banner .bannerimg {
+  width: 100%;
+}
+.main .banner .pagenation {
+  z-index: 20;
+  position: absolute;
+  height: 40px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .banner .pagenation li {
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  margin: 0px 5px;
+  border-radius: 50%;
+}
+.main .category {
+  display: flex;
+  flex-wrap: wrap;
+}
+.main .category li {
+  width: 25%;
+  padding: 20px;
+}
+.main .category li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.main .category li a p {
+  margin: 5px 0px;
+}
+.main .secondkill .top {
+  height: 40px;
+  border-top: 3px solid #f10215;
+  border-bottom: 1px solid #ccc;
+  padding-top: 5px;
+}
+.main .secondkill .top .red {
+  color: #f10215;
+}
+.main .secondkill .top .num {
+  background-color: #000;
+  margin: 0px 3px;
+  padding: 3px;
+  color: white;
+}
+.main .secondkill .products {
+  display: flex;
+}
+.main .secondkill .products a {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+.main .secondkill .products a img {
+  width: 100%;
+}
+.main .market .top {
+  height: 40px;
+  border-top: 3px solid #f10215;
+  border-bottom: 1px solid #ccc;
+  padding-top: 5px;
+  padding-left: 5px;
+}
+.main .market .top span {
+  border-left: 5px solid #f10215;
+  padding-left: 5px;
+}
+.main .market .products {
+  display: flex;
+}
+.main .market .products .left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.main .market .products .left a {
+  flex: 1;
+}
+.main .market .products .left a img {
+  width: 100%;
+}
+.main .market .products .left a:nth-child(1) {
+  border-bottom: 1px solid #aaa;
+}
+.main .market .products .right {
+  flex: 1;
+  display: flex;
+}
+.main .market .products .right a {
+  width: 100%;
+  height: 100%;
+  border-left: 1px solid #aaa;
+}
+.main .market .products .right a img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=index.css.map */

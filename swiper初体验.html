@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 1. 引入swiper的文件 -->
+    <link rel="stylesheet" href="./lib/swiper/css/swiper.min.css">
+    <script src="./lib/swiper/js/swiper.min.js"></script>
+
+    <style>
+        .swiper-container {
+            width: 720px;
+            height: 350px;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- 2. 实现html的主体结构 -->
+        <div class="swiper-container">
+            <!-- 轮播图的每一屏 -->
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./images/l1.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/l2.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/l3.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/l4.jpg" alt="">
+                </div>
+            </div>
+
+            <!-- 下面的小圆点 -->
+            <div class="swiper-pagination"></div>
+        </div>
+</body>
+</html>
+
+<script>
+    // 调用js让轮播图生效
+        var swiper = new Swiper('.swiper-container', {
+          pagination: {
+            el: '.swiper-pagination',
+          },
+        });
+</script>

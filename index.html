@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/jquery-3.1.1.min.js"></script>
+
+    <!-- 1. 引入swiper的文件 -->
+    <link rel="stylesheet" href="./lib/swiper/css/swiper.min.css">
+    <script src="./lib/swiper/js/swiper.min.js"></script>
+
+    <script>
+        $(function() {
+            var maxheight = 600;
+
+            //1. 实现滚动页面， 让搜索框的颜色变透明
+            $(window).scroll(function() {
+                var scrollHeight = $(this).scrollTop();
+
+                //通过滚动的高度来计算 alpha(透明度的值)
+                var alpah = (maxheight - scrollHeight)/maxheight;
+
+                if (alpah <= 0) alpah = 0;
+
+                var color = "rgba(241, 2, 21, "+alpah+")";
+
+                console.log(color);
+                $(".search").css({backgroundColor: color});
+            });
+
+
+            //倒计时
+            //2. 倒计时的功能
+            //1. 指定倒计时的到期时间(2018-5-28 16:08:49)
+            //可以直接使用年月日时分秒来创建一个date对象，但是月是从0开始的
+            var to = new Date(2018, 4, 28, 17, 01, 10);
+
+            function antitime() {
+                var now = new Date();
+
+                //2. 拿到当前时间和过期时间之间的时间差（毫秒）
+                var deltaTime = to - now; //到期时间和当前时间相差的毫秒数
+                
+                //如果超时了，就停止倒计时
+                if (deltaTime <= 0) {
+                    //停止计时器
+                    window.clearInterval(timer);
+                    //停止执行下面的代码
+                    return;
+                }
+                
+                //已知毫秒数，算出几分几秒几秒
+                var m = Math.floor(deltaTime / (60*1000)); 
+                //算出有多少秒
+                var s = Math.floor(deltaTime / 1000 % 60);
+                //算出多少毫秒, 毫秒数只显示10位和百位
+                var ms = Math.floor(deltaTime % 1000 / 10); 
+                    
+                //把时间的数字转成字符串， 如果分秒毫秒不足10， 则前面补0
+                var timeStr = "" + (m<10?"0"+m:m) + (s<10?"0"+s:s) + (ms<10?"0"+ms:ms);
+                console.log(timeStr);
+
+                //063535
+
+                //each是用来扁历.num元素， 其实你可以理解成循环
+                // $(".secondkill .num").each(function(index, span) {
+                //     console.log(span);
+                //     // $(span).html(timeStr.substr(index, index+1));
+                // });
+
+                $(".secondkill .num").each(function(index, span) {
+                    //console.log(span);
+                    $(span).html(timeStr.substring(index, index+1));
+
+                    //$(span), span默认是一个js对象，需要用$(span)变成一个jquery对象
+                    //$(span).html();这个方法是用来设置span里面的值的
+                    //timeStr.subSring();该方法是用来截取字符串 “abcdefg”
+                });
+            }
+
+            //每十毫秒执行一次
+            var timer = setInterval(antitime, 10);
+        });
+
+    </script>
+
+</head>
+
+
+<body>
+    <div class="search">
+        <a href="" class="left">京东</a>
+        <input type="text" class="searchinput">
+        <a href="" class="right">登录</a>
+    </div>
+
+    <div class="main">
+        <div class="banner">
+            <img src="./images/l5.jpg" alt="" class="bannerimg">
+    
+            <!-- 分页的小点 -->
+            <ul class="pagenation">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <!-- 分类 -->
+        <!-- li>a>(img[src="./images/nav$@0.png"]+p{分类}) -->
+        <ul class="category">
+            <li>
+                <a href="">
+                    <img src="./images/nav0.png" alt="">
+                    <p>分类</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="./images/nav1.png" alt="">
+                    <p>分类</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="./images/nav2.png" alt="">
+                    <p>分类</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="./images/nav3.png" alt="">
+                    <p>分类</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="./images/nav4.png" alt="">
+                    <p>分类</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="./images/nav5.png" alt="">
+                    <p>分类</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="./images/nav6.png" alt="">
+                    <p>分类</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="./images/nav7.png" alt="">
+                    <p>分类</p>
+                </a>
+            </li>
+        </ul>
+    
+        <!-- 掌上秒杀 -->
+        <div class="secondkill">
+            <div class="top">
+                <span class="red fl">掌上秒杀</span>
+                <span class="num fl">0</span>
+                <span class="num fl">5</span>
+                <span class="colon fl">:</span>
+                <span class="num fl">3</span>
+                <span class="num fl">5</span>
+                <span class="colon fl">:</span>
+                <span class="num fl">3</span>
+                <span class="num fl">0</span>
+                <span class="more fr">更多</span>
+            </div>
+            <div class="products">
+                <a href=""><img src="./images/detail01.jpg" alt=""></a>
+                <a href=""><img src="./images/detail01.jpg" alt=""></a>
+                <a href=""><img src="./images/detail01.jpg" alt=""></a>
+            </div>
+        </div>
+    
+        <!-- 京东超市 -->
+        <div class="market">
+            <div class="top">
+                <span>京东超市</span>
+            </div>
+            <div class="products">
+                <div class="left">
+                    <a href=""><img src="./images/cp2.jpg" alt=""></a>  
+                    <a href=""><img src="./images/cp3.jpg" alt=""></a>  
+                </div>
+                <div class="right">
+                    <a href="">
+                        <img src="./images/cp1.jpg" alt="">
+                    </a> 
+                </div>
+            </div>
+        </div>
+    
+    
+        <!-- 京东超市 -->
+        <div class="market">
+                <div class="top">
+                    <span>京东超市</span>
+                </div>
+                <div class="products">
+                    <div class="left">
+                        <a href=""><img src="./images/cp6.jpg" alt=""></a>  
+                        <a href=""><img src="./images/cp5.jpg" alt=""></a>  
+                    </div>
+                    <div class="right">
+                        <a href="">
+                            <img src="./images/cp4.jpg" alt="">
+                        </a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+</body>
+</html>

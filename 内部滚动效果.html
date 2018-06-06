@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- 1. 引入swiper插件文件 -->
+    <link rel="stylesheet" href="./lib/swiper/css/swiper.min.css">
+    <script src="./lib/swiper/js/swiper.min.js"></script>
+
+    <style>
+        body {
+            background-color: skyblue;
+        }
+
+        .swiper-container {
+            width: 300px;
+            height: 500px;
+            border: 1px solid #000;
+            margin: 50px auto;
+            background: white;
+        }
+        
+        /*4. 给置类容自适应高度 */
+        .swiper-slide {
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 2. 实现内部的主体结构 -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <ul>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                    <li>你说你还是喜欢孤单</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. 让swiper的内部滚动效果生效 -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            direction: 'vertical',
+            slidesPerView: 'auto',
+            freeMode: true,
+            scrollbar: {
+            el: '.swiper-scrollbar',
+            },
+            mousewheel: true,
+        });
+    </script>
+</body>
+</html>
+

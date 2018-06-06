@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+html, body {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.container .search {
+  width: 100%;
+  flex-basis: 44px;
+  background-color: #f10215;
+  display: flex;
+  align-items: center;
+  z-index: 20px;
+}
+.container .search .left {
+  flex-basis: 50px;
+  color: white;
+  text-align: center;
+  line-height: 100%;
+}
+.container .search .right {
+  flex-basis: 50px;
+  color: white;
+  text-align: center;
+  line-height: 100%;
+}
+.container .search .searchinput {
+  flex: 1;
+  height: 36px;
+  border: none;
+  outline: none;
+  border-radius: 18px;
+}
+.container .category {
+  flex: 1;
+  display: flex;
+}
+.container .category .left {
+  flex-basis: 120px;
+  border-right: 1px solid #ccc;
+  border: 3px solid red;
+  position: relative;
+}
+.container .category .left .swiper-container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.container .category .left .swiper-container .swiper-slide {
+  height: auto;
+}
+.container .category .left .swiper-container .swiper-slide li {
+  height: 50px;
+  line-height: 50px;
+  padding-left: 20px;
+  border-bottom: 1px solid #ccc;
+}
+.container .category .right {
+  flex: 1;
+  background-color: hotpink;
+  height: 100%;
+  border: 3px solid yellow;
+}
+.container .category .right .swiper-container1 {
+  height: 100%;
+  border: 5px solid blue;
+}
+.container .category .right .swiper-container1 .swiper-slide {
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .category .right .swiper-container1 .swiper-slide li {
+  width: 25%;
+  padding: 10px;
+}
+.container .category .right .swiper-container1 .swiper-slide li a {
+  width: 100%;
+}
+.container .category .right .swiper-container1 .swiper-slide li a img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=category-swiper.css.map */
